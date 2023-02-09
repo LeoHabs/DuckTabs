@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>DuckTabs</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1> <span>Duck</span>Tabs</h1>
+            <img src="./images/kisspng-rubber-duck-sticker-telegram-guma-5afdf652ef5589.4649271615265931069803-removebg-preview.png" alt="">
+            <span id="inventoryIcon"><button id="inventoryBtn"><img src="./icons/shopping-bag.svg" alt=""></button></span>
+            <select name="language" id="languageSelector">
+                <option value="eng">English</option>
+                <option value="pt">Português</option>
+                <option value="kr">한국인</option>
+            </select>
+
+        </header>
+        
+        <div id="overlay" class="overlay"></div>
+
+        <div id="contentContainer">
+            <div id="tabChooser">
+                <button id="duckOnDeckBtn">DucksOnDeck</button>
+                <button id="duckShowroomBtn">DuckShowroom</button>
+                <button id="duckStoreBtn">DuckStore</button>
+            </div>
+            <div id="content">
+                <div id="ducksOnDeck" class="dOnDeck-hidden">
+                    <div>
+                        <img src="./images/Hda80e01c754549b8a9b2b3673c06e866t.jpeg" alt="">
+                        <img src="./images/1540-1.jpeg" alt="">
+                        <img src="./images/bandai-tubbz-colecionavel-jurassic-park-ian-malcom.jpeg" alt="">
+                    </div>
+                    <div>
+                        <img src="./images/shopping (1).webp" alt="">
+                        <img src="./images/shopping (2).webp" alt="">
+                        <img src="./images/shopping.webp" alt="">
+                    </div>
+                        
+
+                </div>
+                <div id="duckShowRoom" class="dShowRoom-hidden">
+                    <button id="previousImg"><img src="./icons/arrow-left-circle.svg" alt=""></button>
+                    <img  id="imgOnShowRoom" src="./funnyImages/011etinibfx51.webp" alt="">
+                    <button id="nextImg"><img src="./icons/arrow-right-circle.svg" alt=""></button>
+                </div>
+                <div id="duckStore" class="dStore-selected">
+                    <ul>
+                        <li> <span><img class="productImg" src="./storeImgs/0B34F818-81BD-4EEC-90BF-A01F47B8AC57.jpeg" alt=""> <span class="description">Quackman</span></span> <span> <span class="price">17.99$</span> <button class="shopping-cart"><img src="./icons/shopping-cart.svg" alt=""></button> </span>  </li>
+                        <li> <span><img class="productImg" src="./storeImgs/23206NEW_grande.webp" alt=""> <span class="description">Quacktopus</span></span> <span><span class="price">18.99$</span> <button class="shopping-cart"><img src="./icons/shopping-cart.svg" alt=""></button></span></li>
+                        <li> <span><img class="productImg" src="./storeImgs/31001_white_hot_safety_bath_ducky.jpeg" alt=""> <span class="description">ClassyDuck</span></span> <span><span class="price">4.99$</span> <button class="shopping-cart"><img src="./icons/shopping-cart.svg" alt=""></button></span></li>
+                        <li> <span><img class="productImg" src="./storeImgs/63d35d04fbc549b7a482b7eb45ba3ca7xl.webp" alt=""> <span class="description">Quickt</span></span> <span><span class="price">11.99$</span> <button class="shopping-cart"><img src="./icons/shopping-cart.svg" alt=""></button></span></li>
+                        <li> <span><img class="productImg" src="./storeImgs/dc-comics-paladone-aquaman-rubber-duck.jpeg" alt=""> <span class="description">Quackuaman</span></span> <span><span class="price">5.99$</span> <button class="shopping-cart"><img src="./icons/shopping-cart.svg" alt=""></button></span></li>
+                        <li> <span><img class="productImg" src="./storeImgs/IMG_0524.jpeg" alt=""> <span class="description">Quasckspeare</span></span> <span><span class="price">8.99$</span> <button class="shopping-cart"><img src="./icons/shopping-cart.svg" alt=""></button></span></li>
+                        <li> <span><img class="productImg" src="./storeImgs/IMG_5491__88038.jpeg" alt=""> <span class="description">Ducky Liberty</span></span> <span><span class="price">8.99$</span> <button class="shopping-cart"><img src="./icons/shopping-cart.svg" alt=""></button></span></li>
+                        <li> <span><img class="productImg" src="./storeImgs/joda-rubber-duck.jpg.webp" alt=""> <span class="description">Duckyoda</span></span> <span><span class="price">18.99$</span> <button class="shopping-cart"><img src="./icons/shopping-cart.svg" alt=""></button></span></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="addCartModal" class="cartModal-hidden">
+                <div><button id="cartModalCloseBtn"><img src="./icons/x-circle.svg" alt=""></button></div>
+                <div> <span lang="en">Item added to cart</span> <img src="./icons/shopping-cart.svg" alt=""></div>
+                <div></div>
+        </div>
+
+        <div id="userInventory" class="inventoryModal-hidden">
+                <div>
+                    <button id="inventoryModalCloseBtn"><img src="./icons/x-circle.svg" alt=""></button>
+                </div>
+                <div id="userInventory">
+                    <h3>Your cart</h3>
+                    <ul>
+                        <li><img src="./storeImgs/0B34F818-81BD-4EEC-90BF-A01F47B8AC57.jpeg" alt=""> <span>Nome</span> <span>11$</span></li>
+                    </ul>
+                    <button>Buy</button>
+                </div>
+
+        </div>
+
+    </main>
+</body>
+<script src="./carouselScript.js"></script>
+<script src="./tabsScript.js"></script>
+<script src="./modalsScript.js"></script>
+</html>

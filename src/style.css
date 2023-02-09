@@ -1,0 +1,401 @@
+@font-face {
+  font-family: Duck;
+  src: url("./fonts/DUCKO DEMO.ttf");
+}
+@font-face {
+  font-family: Huglove;
+  src: url(./fonts/huglove/Huglove.ttf);
+}
+@font-face {
+  font-family: Frog;
+  src: url(./fonts/cute_frog/CUTE\ FROG.ttf);
+}
+@font-face {
+  font-family: Monkey;
+  src: url(./fonts/TheMonkey-Regular.ttf);
+}
+@font-face {
+  font-family: Shop;
+  src: url("./fonts/catshop/CatShop.ttf");
+}
+@keyframes cartMoving {
+  0% {
+    transform: translate(-250px);
+  }
+  100% {
+    transform: translate(250px);
+  }
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./images/ce9a7557a6290624a43b1c91b042d5d2.jpeg");
+  background-attachment: fixed;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+main header {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 0px 0px 20px 20px;
+  width: 60%;
+  box-shadow: 0px 5px 6px black;
+}
+main header img {
+  height: 100px;
+  align-self: center;
+}
+main header select {
+  height: 40px;
+  border-radius: 30px;
+  align-self: center;
+  margin-left: 30px;
+}
+main header button {
+  margin-left: 700px;
+  align-self: center;
+}
+main #inventoryIcon {
+  justify-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+}
+main #inventoryIcon img {
+  height: 35px;
+}
+main #contentContainer {
+  margin-top: 150px;
+  width: 80%;
+  height: 70%;
+}
+main #contentContainer #tabChooser {
+  display: flex;
+}
+main #contentContainer #tabChooser #duckStoreBtn {
+  background-color: #219ebc;
+  color: white;
+}
+main #contentContainer #tabChooser #duckOnDeckBtn {
+  background-color: white;
+}
+main #contentContainer #tabChooser button {
+  cursor: pointer;
+  width: 50%;
+  height: 100px;
+  border: none;
+  background-color: white;
+  font-size: 35px;
+  font-family: Duck;
+}
+main #contentContainer #tabChooser button:hover {
+  background-color: aliceblue;
+}
+main #contentContainer #tabChooser button:first-child {
+  border-radius: 100px 0px 0px 0px;
+}
+main #contentContainer #tabChooser button:nth-child(3) {
+  background-color: aliceblue;
+  border-radius: 0px 100px 0px 0px;
+}
+main #contentContainer #content {
+  height: fit-content;
+}
+main #contentContainer #content #ducksOnDeck div {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+main #contentContainer #content #ducksOnDeck div img {
+  width: 20%;
+  border-radius: 500px;
+  border: 40px #f4a261 solid;
+}
+main #contentContainer #content #duckShowRoom img {
+  height: 60%;
+}
+main #contentContainer #content #duckShowRoom button {
+  height: 100px;
+  width: 60px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+#duckStore ul {
+  height: 100%;
+  width: 100%;
+}
+#duckStore ul li:last-child {
+  border-bottom: none;
+}
+#duckStore ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+  height: 20%;
+  width: 100%;
+  border-bottom: 3px solid black;
+}
+#duckStore ul li span {
+  display: flex;
+  align-items: center;
+}
+#duckStore ul li span :last-child {
+  margin-right: 40px;
+}
+#duckStore ul li button {
+  border: none;
+  background-color: transparent;
+  height: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in;
+}
+#duckStore ul li button:hover {
+  transform: scale(1.2);
+}
+#duckStore .productImg {
+  border: 8px solid #f4a261;
+  height: 100px;
+  border-radius: 100px;
+  margin-left: 100px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#duckStore .description {
+  font-size: 60px;
+  font-family: Monkey;
+  margin-left: 40px;
+}
+#duckStore .price {
+  background-color: #ffd60a;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  font-family: Huglove;
+  font-size: 30px;
+  margin-right: 40px;
+}
+
+.dOnDeck-hidden {
+  display: none;
+}
+
+.dOnDeck-selected {
+  display: flex;
+  flex-direction: column;
+}
+
+.dShowRoom-hidden {
+  display: none;
+}
+
+.dShowRoom-selected {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 600px;
+}
+
+.dStore-selected {
+  background-color: white;
+  height: 800px;
+  display: flex;
+  overflow-y: scroll;
+}
+
+.dStore-hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: Duck;
+  text-align: center;
+  color: #ffd60a;
+}
+h1 span {
+  color: #f4a261;
+}
+
+.overlay-selected {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.cartModal-selected {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 600px;
+  background-color: rgb(70, 93, 137);
+  color: whitesmoke;
+  position: absolute;
+  margin-top: 40vh;
+  border: 15px solid #f4a261;
+  border-radius: 10px;
+  z-index: 1;
+}
+.cartModal-selected div {
+  height: 33%;
+}
+.cartModal-selected div:first-child {
+  display: flex;
+  justify-content: flex-end;
+}
+.cartModal-selected div:first-child button {
+  cursor: pointer;
+  height: 80%;
+  width: 12%;
+  background-color: transparent;
+  border: none;
+}
+.cartModal-selected div:first-child button img {
+  transform: scale(1.5);
+}
+.cartModal-selected div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-family: Frog;
+}
+.cartModal-selected div:nth-child(2) img {
+  position: absolute;
+  animation: cartMoving 1.5s ease-out;
+  transform: translate(250px);
+}
+
+.inventoryModal-selected {
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  width: 20vw;
+  background-color: rgb(70, 93, 137);
+  right: 0;
+  bottom: 0;
+  border: #f4a261 25px solid;
+  border-radius: 150px 0px 0px 0px;
+  box-sizing: border-box;
+  box-shadow: 1px 0px 10px black;
+  overflow-y: scroll;
+}
+.inventoryModal-selected div:first-child {
+  height: 5%;
+  display: flex;
+  justify-content: flex-end;
+}
+.inventoryModal-selected div:first-child button {
+  height: fit-content;
+  transform: scale(1.5);
+  margin: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.inventoryModal-selected div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+.inventoryModal-selected div:nth-child(2) button {
+  width: 50%;
+  height: 30px;
+  align-self: center;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+.inventoryModal-selected div:nth-child(2) button:hover {
+  transform: scale(1.05);
+}
+.inventoryModal-selected div:nth-child(2) ul {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 25px;
+  list-style: none;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.inventoryModal-selected div:nth-child(2) ul button {
+  width: 50px;
+}
+.inventoryModal-selected div:nth-child(2) ul li {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 80%;
+  height: fit-content;
+  padding-bottom: 15px;
+  border-bottom: 4px black solid;
+}
+.inventoryModal-selected div:nth-child(2) ul li:last-child {
+  border: none;
+}
+.inventoryModal-selected div:nth-child(2) ul li :nth-child(2) {
+  color: white;
+}
+.inventoryModal-selected div:nth-child(2) ul li :nth-child(3) {
+  color: white;
+  background-color: green;
+  padding: 5px;
+  border-radius: 10px;
+  font-family: Frog;
+}
+.inventoryModal-selected div:nth-child(2) h3 {
+  color: white;
+  align-self: center;
+  font-size: 30px;
+  font-family: Shop;
+}
+.inventoryModal-selected div:nth-child(2) img {
+  height: 80px;
+  border-radius: 50px;
+}
+
+#inventoryBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cartModal-hidden {
+  display: none;
+}
+
+.overlay-hidden {
+  display: none;
+}
+
+.inventoryModal-hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
