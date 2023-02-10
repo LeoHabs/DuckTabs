@@ -1,6 +1,6 @@
 # DuckTabs
 
-## DuckTabs 🦆 is a website built with HTML, JavaScript and SCSS, dedicated to all things ducks! The site consists of three main tabs: Upcoming Rubber Ducks, Duck Showroom and Rubber Duck Store. Each tab provides an exciting and unique experience for users.
+## DuckTabs 🦆 is a website built with HTML, JavaScript and SCSS, dedicated to all things ducks! The site consists of three main tabs: DucksOnDeck, DuckShowroom and DuckStore. Each tab provides an exciting and unique experience for users.
 
 ## DucksOnDeck
 The first tab is all about the latest and greatest rubber ducks! Users can stay up-to-date with the upcoming releases. 
