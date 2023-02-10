@@ -25,9 +25,9 @@
 
         <div id="contentContainer">
             <div id="tabChooser">
-                <button id="duckOnDeckBtn">DucksOnDeck</button>
-                <button id="duckShowroomBtn">DuckShowroom</button>
-                <button id="duckStoreBtn">DuckStore</button>
+                <button id="duckOnDeckBtn" class="variableLang">DucksOnDeck</button>
+                <button id="duckShowroomBtn" class="variableLang">DuckShowroom</button>
+                <button id="duckStoreBtn" class="variableLang">DuckStore</button>
             </div>
             <div id="content">
                 <div id="ducksOnDeck" class="dOnDeck-hidden">
@@ -67,7 +67,7 @@
 
         <div id="addCartModal" class="cartModal-hidden">
                 <div><button id="cartModalCloseBtn"><img src="./icons/x-circle.svg" alt=""></button></div>
-                <div> <span lang="en">Item added to cart</span> <img src="./icons/shopping-cart.svg" alt=""></div>
+                <div> <span class="variableLang">Item added to cart</span> <img src="./icons/shopping-cart.svg" alt=""></div>
                 <div></div>
         </div>
 
@@ -75,12 +75,7 @@
                 <div>
                     <button id="inventoryModalCloseBtn"><img src="./icons/x-circle.svg" alt=""></button>
                 </div>
-                <div id="userInventory">
-                    <h3>Your cart</h3>
-                    <ul>
-                        <li><img src="./storeImgs/0B34F818-81BD-4EEC-90BF-A01F47B8AC57.jpeg" alt=""> <span>Nome</span> <span>11$</span></li>
-                    </ul>
-                    <button>Buy</button>
+                <div id="userInventoryList">
                 </div>
 
         </div>
@@ -90,4 +85,6 @@
 <script src="./carouselScript.js"></script>
 <script src="./tabsScript.js"></script>
 <script src="./modalsScript.js"></script>
+<script src="./cartScript.js" ></script>
+<script src="./languageScript.js"></script>
 </html>

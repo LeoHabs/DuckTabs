@@ -66,7 +66,6 @@ main header select {
   margin-left: 30px;
 }
 main header button {
-  margin-left: 700px;
   align-self: center;
 }
 main #inventoryIcon {
@@ -297,7 +296,7 @@ h1 span {
   display: flex;
   flex-direction: column;
   height: 95vh;
-  width: 20vw;
+  width: 30vw;
   background-color: rgb(70, 93, 137);
   right: 0;
   bottom: 0;
@@ -373,7 +372,7 @@ h1 span {
   color: white;
   align-self: center;
   font-size: 30px;
-  font-family: Shop;
+  font-family: Duck;
 }
 .inventoryModal-selected div:nth-child(2) img {
   height: 80px;

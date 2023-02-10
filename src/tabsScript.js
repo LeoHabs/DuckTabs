@@ -1,7 +1,6 @@
 const deckTabBtn = document.getElementById("duckOnDeckBtn");
 const showroomTabBtn = document.getElementById("duckShowroomBtn");
 const storeTabBtn = document.getElementById("duckStoreBtn");
-
 const deckDiv = document.getElementById("ducksOnDeck");
 const showroomDiv = document.getElementById("duckShowRoom");
 const storeDiv = document.getElementById("duckStore");
