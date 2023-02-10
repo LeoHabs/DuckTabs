@@ -4,6 +4,23 @@ const storeTabBtn = document.getElementById("duckStoreBtn");
 const deckDiv = document.getElementById("ducksOnDeck");
 const showroomDiv = document.getElementById("duckShowRoom");
 const storeDiv = document.getElementById("duckStore");
+const duckLogo = document.getElementById("duckLogo");
+const duckAudio = document.getElementsByTagName("audio")[0];
+const trollAudio = document.getElementsByTagName("audio")[1];
+let duckAudioCounter = 0;
+
+
+
+duckLogo.addEventListener("mouseenter",()=>{
+    duckAudioCounter++;
+    if(duckAudioCounter === 15){
+        trollAudio.play();
+        return;
+    }
+    duckAudio.play();
+})
+
+
 
 deckTabBtn.addEventListener("click",()=>{
     showroomTabBtn.style.backgroundColor = "white";

@@ -23,6 +23,15 @@
   src: url("./fonts/catshop/CatShop.ttf");
 }
 
+@keyframes cartModalAppear {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 @keyframes cartMoving {
   0% {
     transform: translate(-250px);
@@ -32,16 +41,25 @@
   }
 }
 
+@keyframes shopSlideIn {
+  0%{
+    width: 0vw;
+  }
+  100%{
+    width: 30vw;
+  }
+}
+
 * {
   padding: 0px;
   margin: 0px;
 }
-
 body {
   height: 100vh;
   width: 100vw;
   background-image: url("./images/ce9a7557a6290624a43b1c91b042d5d2.jpeg");
   background-attachment: fixed;
+  min-width: fit-content;
 }
 
 main {
@@ -53,10 +71,10 @@ main {
   header {
     background-color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding-top: 30px;
     padding-bottom: 30px;
-
+    min-width: fit-content;
     border-radius: 0px 0px 20px 20px;
     width: 60%;
     box-shadow: 0px 5px 6px black;
@@ -69,9 +87,27 @@ main {
       border-radius: 30px;
       align-self: center;
       margin-left: 30px;
+      padding-left: 10px;
+      border: 4px solid #f4a261;
+      font-family: Frog;
+      font-size: 18px;
+      &:focus{
+        outline: none;
+      }
     }
     button{
       align-self: center;
+    }
+
+    #titleSpan{
+      justify-self: center;
+      display: flex;
+      padding-left: 100px;
+    }
+  
+    #cartAndSelectorSpan{
+      display: flex;
+      margin-right: 40px;
     }
   }
 
@@ -83,6 +119,8 @@ main {
       height: 35px;
     }
   }
+
+  
 
   #contentContainer {
     margin-top: 150px;
@@ -273,6 +311,7 @@ h1 {
 }
 
 .cartModal-selected {
+  animation: cartModalAppear 0.3s ease-out;
   display: flex;
   flex-direction: column;
   height: 300px;
@@ -317,6 +356,8 @@ h1 {
 }
 
 .inventoryModal-selected {
+  animation: shopSlideIn 0.3s;
+  overflow-x: hidden;
   z-index: 1;
   position: fixed;
   display: flex;
